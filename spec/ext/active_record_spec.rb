@@ -22,8 +22,6 @@ RSpec.describe 'AwesomePrint/ActiveRecord', skip: -> { !ExtVerifier.has_rails? }
 }
       EOS
 
-			expect(RUBY_VERSION).to be >= '2.5'
-
       str.sub!('?', '1992-10-10 12:30:00 UTC')
 
       expect(out).to be_similar_to(str)
