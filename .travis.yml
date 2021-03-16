@@ -4,6 +4,7 @@ os: linux
 dist: xenial
 
 rvm:
+  - 2.4
   - 2.5
   - 2.6
   - 2.7
@@ -32,6 +33,11 @@ jobs:
     - rvm: 2.6
       env: RUBYOPT="--enable-frozen-string-literal"
       gemfile: gemfiles/rails_5.2.gemfile
+  exclude:
+    - rvm: 2.4
+      gemfile: gemfiles/rails_6.0.gemfile
+    - rvm: 2.4
+      gemfile: gemfiles/rails_6.1.gemfile
 
 addons:
   code_climate:
